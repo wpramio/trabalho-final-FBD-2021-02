@@ -1,0 +1,6 @@
+*~
+*.local
+tmp
+.git
+.rubocop.yml
+.volumes

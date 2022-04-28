@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <%= erb :navbar %>
+    <% unless @users.nil? %>
+      <h1>Usuários</h1>
+      <h2><%= @users.count %> usuários encontrados.</h2>
+      <h4>Nomes:</h4>
+        <ul>
+          <% @users.each do |u_name| %>
+            <li><%= u_name %></li>
+          <% end %>
+        </ul>
+    <% else %>
+      <h1>O banco de dados não contém nenhum usuário.</h1>
+    <% end %>
+  </body>
+</html>

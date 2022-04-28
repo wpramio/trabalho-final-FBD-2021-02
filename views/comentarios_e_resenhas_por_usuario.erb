@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <%= erb :navbar %>
+    <h1>Comentários e resenhas por usuário</h1>
+    <% unless @result.nil? %>
+      <% @result.each do |m| %>
+        <ul>
+          <% m.each do |key, value| %>
+            <li><b><%= key %></b>: <%= value %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% else %>
+      <h1>Nenhum resultado encontrado</h1>
+    <% end %>
+  </body>
+</html>
